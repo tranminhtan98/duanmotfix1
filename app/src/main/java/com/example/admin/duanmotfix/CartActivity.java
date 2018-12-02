@@ -82,6 +82,8 @@ private TextView tvmoney;
 
 
     void sendemail(){
+        Intent intent=new Intent(CartActivity.this, KhachhangActivity.class);
+        startActivity(intent);
 
     }
     @Override

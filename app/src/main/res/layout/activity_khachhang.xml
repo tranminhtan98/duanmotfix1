@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".KhachhangActivity">
+
+
+    <TextView
+
+        android:textColor="#000000"
+        android:textStyle="bold|normal"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:text="Thông tin khách hàng"
+        android:textSize="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/tennguoidung"
+        android:layout_margin="20dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="Mời nhập tên :"
+        android:layout_width="match_parent"
+        />
+    <EditText
+        android:id="@+id/sodienthoainguoidung"
+        android:layout_margin="20dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="Mời nhập số điện thoại :"
+        android:layout_width="match_parent"
+       />
+    <EditText
+        android:id="@+id/diachi"
+        android:layout_margin="20dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="Mời nhập địa chỉ :"
+        android:layout_width="match_parent"
+       />
+
+    <Button
+        android:id="@+id/gui"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:text="Gửi" />
+    <TextView
+        android:textColor="#000000"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:text="Cảm ơn đã mua hàng của chúng tôi"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

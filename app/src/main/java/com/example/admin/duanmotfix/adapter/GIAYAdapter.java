@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.admin.duanmotfix.R;
@@ -72,6 +73,7 @@ public class GIAYAdapter extends RecyclerView.Adapter<GIAYAdapter.GiayViewHolder
                         CartDAO cartDAO = new CartDAO(databaseHelper);
                         Cart cart = new Cart(pcs.get(position).getId()+Math.random(),pcs.get(position).getTitle(),pcs.get(position).getShortdesc(),pcs.get(position).getRating(),pcs.get(position).getPrice(),1);
                         cartDAO.insertCart(cart);
+                        Toast.makeText(mCtx,"Đã Thêm Sản Phẩm " + pcs.get(position).getTitle()+"Vào Giỏ Hàng" , Toast.LENGTH_SHORT).show();
                     }
                 });
                 dialog.show();
@@ -92,6 +94,8 @@ public class GIAYAdapter extends RecyclerView.Adapter<GIAYAdapter.GiayViewHolder
 
                 Cart cart = new Cart(pcs.get(position).getId()+Math.random(),pcs.get(position).getTitle(),pcs.get(position).getShortdesc(),pcs.get(position).getRating(),pcs.get(position).getPrice(),1);
                 cartDAO.insertCart(cart);
+                Toast.makeText(mCtx,"Đã Thêm Sản Phẩm " + pcs.get(position).getTitle()+"Vào Giỏ Hàng" , Toast.LENGTH_SHORT).show();
+
             }
         });
 

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,83 +11,128 @@
     android:orientation="vertical"
     android:background="@color/background"
     tools:context=".ThongtinhangActivity">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar4"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
 
-    </android.support.v7.widget.Toolbar>
-
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <TextView
-
+        android:gravity="center"
         android:id="@+id/titleclick"
         android:textColor="#000000"
         android:textStyle="bold|normal"
         android:layout_marginBottom="50dp"
         android:layout_gravity="center"
         android:text="Tên Giày"
-        android:textSize="26dp"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+<LinearLayout
+
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/imglogoclick"
+        android:layout_width="26dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:src="@drawable/anh1" />
+
+
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="210dp">
-        <ImageView
-            android:id="@+id/imglogoclick"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/anh1"
-            android:layout_width="150dp"
-            android:layout_height="200dp" />
+
+        android:layout_width="9dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
         <LinearLayout
-            android:layout_marginLeft="40dp"
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size:"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold|normal" />
+
             <TextView
                 android:id="@+id/size"
-                android:textSize="25sp"
-                android:textColor="#000000"
-                android:textStyle="bold|normal"
-                android:text="Size"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Size"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold|normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giá :"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold|normal" />
+
             <TextView
                 android:id="@+id/hangclick"
-                android:layout_marginTop="15dp"
-                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Giá"
                 android:textColor="#000000"
-                android:textStyle="bold|normal"
-                android:text="Hãng"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/btnthem"
-                android:onClick="them"
-                android:layout_marginTop="26dp"
-                android:text="Thêm Vào Giỏ Hàng"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="15sp"
+                android:textStyle="bold|normal" />
         </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnthem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:onClick="them"
+            android:text="Thêm Vào Giỏ Hàng" />
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textdes"
-        android:text="Vans là một thương hiệu chuyên sản xuất
-các sản phẩm về thể loại các con phố phố
-có đậm tính thể thao giả mạo hiểm và
-được phần đông quý khách hàng ưa
-chuộng trong phổ biến năm qua. nhãn
-hàng này được ra đời vào năm 1966 do
-ông Paul Van Doren và Gordon C.Lee,
-Serge d’Elia cùng Jame Van Doren đồng
-sáng lậpVans là một thương hiệu chuyên
-sản xuất các sản phẩm về thể loại các con
-phố phố, có đậm tính thể thao."
-        android:layout_gravity="center"
-        android:textSize="18dp"
-        android:layout_margin="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textdes"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:text="abc"
+        android:textSize="18dp" />
+
+
+</LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

@@ -38,48 +38,38 @@ public class ManhinhchinhActivity extends AppCompatActivity {
 
         Giay giay = new Giay(
                 "giay",
-                "Giay dep 1",
-                "",
-                16,
-                30,
+                "Vans Classics Authentic Blue",
+                "Đặc điểm của những đôi giày Vans Authentic nổi bật từ chính những gì cơ bản và tối giản nhất của một đôi giày thể thao",
+                38,
+                1300000,
                 "" + R.drawable.anh1);
         giaydao.insertGIAY(giay);
 
         Giay giay1 = new Giay(
                 "giay1",
-                "Giay dep 2",
-                "Vans là một thương hiệu chuyên sản xuất\n" +
-                        "các sản phẩm về thể loại các con phố phố\n" +
-                        "có đậm tính thể thao giả mạo hiểm và\n" +
-                        "được phần đông quý khách hàng ưa\n" +
-                        "chuộng trong phổ biến năm qua. nhãn\n" +
-                        "hàng này được ra đời vào năm 1966 do\n" +
-                        "ông Paul Van Doren và Gordon C.Lee,\n" +
-                        "Serge d’Elia cùng Jame Van Doren đồng\n" +
-                        "sáng lậpVans là một thương hiệu chuyên\n" +
-                        "sản xuất các sản phẩm về thể loại các con\n" +
-                        "phố phố, có đậm tính thể thao.",
-                16,
+                "VANS OLD SKOOL CLASSIC BLACK/WHITE ",
+                "Là một trong những phiên bản đầu tiên và cổ điển nhất của VANS trong bộ sưu tập VANS OLD SKOOL ra đời năm 1977. Tới nay đôi giày chỉ với phối màu đen trắng này vẫn nằm trong top \"Best Seller\" của VANS trên toàn thế giới, với kiểu dáng cổ điển cùng \"sọc Jazz\" huyền thoại hợp thời trang khiến đôi VANS này thật sự trở thành mẫu giày classic bất bại, là fan hâm mộ của VANS nói chung và những skaters nói riêng đều nên có một đôi trong tủ giày.",
                 40,
+                1699000,
                 "" + R.drawable.anh2);
         giaydao.insertGIAY(giay1);
 
         Giay giay2 = new Giay(
                 "giay2",
-                "Giay dep 3",
-                "",
-                16,
-                50,
+                "VANS OLD SKOOL CLASSIC Green",
+                "Thiết kế của giày Vans Old Skool sở hữu vẻ ngoài đặc trưng từ đường sóng trắng chạy dọc hai bên thân giày trên nền vải da lộn bền bỉ, phần cổ giày đệm mút vải êm ái, tối ưu hóa mọi chuyển động",
+                43,
+                1299000,
                 "" + R.drawable.anh3);
         giaydao.insertGIAY(giay2);
 
 
         Giay giay3 = new Giay(
                 "giay3",
-                "Giay dep 4",
-                "",
-                16,
-                50,
+                "Vans Classics Authentic Pink",
+                "Giầy VANS gắn liền với phong cách đầy bụi bặm và năng động của giới trẻ – hiện Vans đang xuất hiện ở mọi nơi. Sản phẩm đã trở nên rất đỗi quen thuộc và gắn liền với đời sống của đại bộ phận giới trẻ đam mê thể thao.",
+                36,
+                1299000,
                 "" + R.drawable.anh4);
         giaydao.insertGIAY(giay3);
 
