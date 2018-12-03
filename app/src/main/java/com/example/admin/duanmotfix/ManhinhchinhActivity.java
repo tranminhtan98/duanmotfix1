@@ -6,8 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import android.support.v7.widget.SearchView;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+
 
 
 import com.example.admin.duanmotfix.adapter.GIAYAdapter;
@@ -25,8 +31,8 @@ public class ManhinhchinhActivity extends AppCompatActivity {
     private DatabaseHelper databaseHelper;
     private GIAYAdapter giayAdapter;
     private GridLayoutManager gridLayoutManager;
-
-
+    private ListView lv;
+    private SearchView searchView;
 
 
     @Override
@@ -73,6 +79,42 @@ public class ManhinhchinhActivity extends AppCompatActivity {
                 "" + R.drawable.anh4);
         giaydao.insertGIAY(giay3);
 
+        Giay giay4 = new Giay(
+                "giay4",
+                "VANS OLD SKOOL CLASSIC Red",
+                "Giầy VANS gắn liền với phong cách đầy bụi bặm và năng động của giới trẻ – hiện Vans đang xuất hiện ở mọi nơi. Sản phẩm đã trở nên rất đỗi quen thuộc và gắn liền với đời sống của đại bộ phận giới trẻ đam mê thể thao.",
+                39,
+                1599000,
+                "" + R.drawable.anh5);
+        giaydao.insertGIAY(giay4);
+
+        Giay giay5 = new Giay(
+                "giay5",
+                "Vans Checkerboard\n Red",
+                "Giầy VANS gắn liền với phong cách đầy bụi bặm và năng động của giới trẻ – hiện Vans đang xuất hiện ở mọi nơi. Sản phẩm đã trở nên rất đỗi quen thuộc và gắn liền với đời sống của đại bộ phận giới trẻ đam mê thể thao.",
+                41,
+                1799000,
+                "" + R.drawable.anh6);
+        giaydao.insertGIAY(giay5);
+
+        Giay giay6 = new Giay(
+                "giay6",
+                "vans old skool checkerboard",
+                "Giầy VANS gắn liền với phong cách đầy bụi bặm và năng động của giới trẻ – hiện Vans đang xuất hiện ở mọi nơi. Sản phẩm đã trở nên rất đỗi quen thuộc và gắn liền với đời sống của đại bộ phận giới trẻ đam mê thể thao.",
+                41,
+                1799000,
+                "" + R.drawable.anh7);
+        giaydao.insertGIAY(giay6);
+
+        Giay giay7 = new Giay(
+                "giay7",
+                "Giày Vans Old Skool\n Fire",
+                "Giầy VANS gắn liền với phong cách đầy bụi bặm và năng động của giới trẻ – hiện Vans đang xuất hiện ở mọi nơi. Sản phẩm đã trở nên rất đỗi quen thuộc và gắn liền với đời sống của đại bộ phận giới trẻ đam mê thể thao.",
+                41,
+                1799000,
+                "" + R.drawable.anh8);
+        giaydao.insertGIAY(giay7);
+
 
 
 
@@ -102,7 +144,25 @@ public class ManhinhchinhActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.nav_menu,menu);
-        return super.onCreateOptionsMenu(menu);
+        final MenuItem myActionMenuItem= menu.findItem(R.id.timkiem);
+        searchView = (SearchView) myActionMenuItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String s) {
+                if (TextUtils.isEmpty(s)){
+                    giayAdapter.filter("");
+                }
+                else{
+                    giayAdapter.filter(s);
+                }
+                return true;
+            }
+        });
+        return true;
     }
 
     @Override

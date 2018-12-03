@@ -9,6 +9,7 @@
     tools:context=".ManhinhchinhActivity">
 
 
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/manhinhchinh"
         android:layout_width="match_parent"

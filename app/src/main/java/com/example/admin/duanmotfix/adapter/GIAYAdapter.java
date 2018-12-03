@@ -21,17 +21,18 @@ import com.example.admin.duanmotfix.model.Cart;
 import com.example.admin.duanmotfix.model.Giay;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class GIAYAdapter extends RecyclerView.Adapter<GIAYAdapter.GiayViewHolder> {
     private Context mCtx;
     private ArrayList<Giay> pcs;
-    private GIAYDAO pcdao;
+    private GIAYDAO giaydao;
 
-    public GIAYAdapter(Context mCtx, ArrayList<Giay> pcs, GIAYDAO pcdao) {
+    public GIAYAdapter(Context mCtx, ArrayList<Giay> pcs, GIAYDAO giaydao) {
         this.mCtx = mCtx;
         this.pcs = pcs;
-        this.pcdao = pcdao;
+        this.giaydao = giaydao;
     }
 
     @NonNull
@@ -128,6 +129,24 @@ public class GIAYAdapter extends RecyclerView.Adapter<GIAYAdapter.GiayViewHolder
             addCart = itemView.findViewById(R.id.btnAddCart);
         }
     }
+    public void filter(String s){
+        s = s.toLowerCase(Locale.getDefault());
+        pcs.clear();
+        if (s.length()==0){
+            pcs.addAll(giaydao.getAllGiay());
+        }
+        else{
+            for (Giay model : giaydao.getAllGiay()){
+                if (model.getTitle().toLowerCase(Locale.getDefault())
+                        .contains(s)){
+                    pcs.add(model);
+                }
+            }
+        }
+        notifyDataSetChanged();
 
+
+
+    }
 
 }
